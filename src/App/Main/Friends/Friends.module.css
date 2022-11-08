@@ -1,0 +1,16 @@
+.pages {
+    margin: 4px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.page {
+    cursor: pointer;
+    padding: 8px;
+}
+
+.currentPage {
+    padding: 8px;
+    font-weight: 900;
+    color: rgb(12, 125, 255);
+}

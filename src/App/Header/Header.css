@@ -1,0 +1,20 @@
+img {
+    margin: -6px;
+    width: 60px;
+}
+
+.Header {
+    display: flex;
+    align-items:flex-end;
+    grid-area: h;
+    margin: 0 4px 0 4px;
+    padding: 10px;
+    font-size: 21px;
+    background-color: rgb(2, 79, 166);
+    border-radius: 0 0 12px 12px;
+}
+
+.Header-text {
+    margin-left: 10px;
+    margin-bottom: -7px;
+}

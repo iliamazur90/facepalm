@@ -1,0 +1,45 @@
+.Feed {
+}
+
+.addPostArea {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.addPostAvatar {
+    flex: 0 1 5%;
+}
+
+.addPostAvatar img {
+    margin: 4px;
+    border-radius: 50%;
+    width: 45px;
+}
+
+.addPostTextArea {
+    flex: 0 1 90%;
+    padding: 4px;
+}
+
+.addPostTextArea textarea{
+    border-radius: 8px;
+    min-width: 104%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 16px;
+    color: aliceblue;
+    background-color:rgba(60, 190, 255, 0.204);
+}
+.addPostButtonArea {
+    flex: 0 1 100%;
+}
+
+.addPostButtonArea button {
+    width: 100%;
+    height: 30px;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: rgb(2, 79, 166);
+}

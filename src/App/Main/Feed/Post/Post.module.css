@@ -1,0 +1,17 @@
+.Post {
+    display: flex;
+    margin: 8px;
+    background-color:rgba(68, 29, 80, 0.601);
+    border-radius: 8px;
+}
+
+.postAvatar img {
+    margin: 4px;
+    border-radius: 50%;
+    width: 35px;
+}
+
+.postText {
+    align-self: end;
+    margin: 0 0 8px 10px;
+}
