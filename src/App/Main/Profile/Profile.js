@@ -1,9 +1,9 @@
 import React from "react";
-import s from "./Feed.module.css";
+import s from "./Profile.module.css";
 import Post from "./Post/Post";
 import Avatar from "./../../../img/fp_avatar.jpg";
 
-const Feed = props => {
+const Profile = props => {
 
   const changingPost = e => {
     const text = e.target.value
@@ -15,8 +15,8 @@ const Feed = props => {
   };
 
   return (
-    <div className={s.Feed}>
-      <h2>Feed</h2>
+    <div className={s.Profile}>
+      <h2>Profile</h2>
       <div className={s.addPostArea}>
         <div className={s.addPostAvatar}>
           <img src={Avatar} alt='Your Avatar' />
@@ -38,4 +38,4 @@ const Feed = props => {
   );
 };
 
-export default Feed;
+export default Profile;

@@ -42,7 +42,7 @@ let initialState = {
   newPostText: "",
 };
 
-const feedReducer = (state = initialState, action) => {
+const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_POST_TEXT:
       return {
@@ -71,10 +71,10 @@ const feedReducer = (state = initialState, action) => {
   }
 };
 
-export const updatePostTextAC = currentText => ({
+export const typingPost = currentText => ({
   type: UPDATE_POST_TEXT,
   currentText: currentText,
 });
-export const addPostAC = () => ({ type: ADD_POST });
+export const addPost = () => ({ type: ADD_POST });
 
-export default feedReducer;
+export default profileReducer;

@@ -1,9 +1,9 @@
 import { combineReducers, createStore } from 'redux';
-import feedReducer from "./feed-reducer";
+import profileReducer from "./profile-reducer";
 import friendsReducer from './friends-reducer';
 
 let reducers = combineReducers({    
-    feed: feedReducer,
+    profile: profileReducer,
     friends: friendsReducer,
 })
 let store = createStore(reducers);
