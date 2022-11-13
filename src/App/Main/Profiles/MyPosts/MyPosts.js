@@ -1,33 +1,30 @@
-import React from "react";
-import s from "./Profile.module.css";
-import Post from "./Post/Post";
-import Avatar from "./../../../img/fp_avatar.jpg";
+import s from './MyPosts.module.css';
+import Avatar from '../../../../img/fp_avatar.jpg';
+import Post from './Post/Post';
 
-const Profile = props => {
-
+const MyPosts = props => {
   const changingPost = e => {
-    const text = e.target.value
-    props.typingPost(text)
+    const text = e.target.value;
+    props.typingPost(text);
   };
 
   const addingPost = () => {
-    props.addPost()
+    props.addPost();
   };
 
   return (
-    <div className={s.Profile}>
+    <div className={s.MyPosts}>
       <h2>Profile</h2>
       <div className={s.addPostArea}>
         <div className={s.addPostAvatar}>
-          <img src={Avatar} alt='Your Avatar' />
+          <img src={Avatar} alt="Your Avatar" />
         </div>
         <div className={s.addPostTextArea}>
           <textarea
             onChange={changingPost}
             value={props.newPostText}
-            placeholder='type your text...'
-          >
-          </textarea>
+            placeholder="type your text..."
+          ></textarea>
         </div>
         <div className={s.addPostButtonArea}>
           <button onClick={addingPost}>Add post</button>
@@ -38,4 +35,4 @@ const Profile = props => {
   );
 };
 
-export default Profile;
+export default MyPosts;

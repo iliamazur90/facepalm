@@ -1,5 +1,6 @@
 const UPDATE_POST_TEXT = "UPDATE-POST-TEXT";
 const ADD_POST = "ADD-POST";
+const SET_USER_PROFILE = "SET-USER-PROFILE";
 
 let initialState = {
   posts: [
@@ -40,9 +41,11 @@ let initialState = {
     },
   ],
   newPostText: "",
+  profile: null,
+  isFetching: false,
 };
 
-const profileReducer = (state = initialState, action) => {
+const profilesReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_POST_TEXT:
       return {
@@ -66,6 +69,11 @@ const profileReducer = (state = initialState, action) => {
           },
         ],
       };
+      case SET_USER_PROFILE:
+        return {
+          ...state,
+          profile: action.profile,
+        }
     default:
       return state;
   }
@@ -73,8 +81,9 @@ const profileReducer = (state = initialState, action) => {
 
 export const typingPost = currentText => ({
   type: UPDATE_POST_TEXT,
-  currentText: currentText,
+  currentText
 });
 export const addPost = () => ({ type: ADD_POST });
+export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile})
 
-export default profileReducer;
+export default profilesReducer;

@@ -15,7 +15,7 @@
     width: 35px;
 }
 
-.friendName {
+.friendName, a{
     margin: 4px;
     align-self: center;
     font-size: 18px;

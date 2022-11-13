@@ -1,5 +1,5 @@
 import s from "./Post.module.css";
-import Avatar from "./../../../../img/fp_avatar.jpg";
+import Avatar from '../../../../../img/fp_avatar.jpg';
 
 const Post = (props) => {
   const post = props.posts.map(p => (
