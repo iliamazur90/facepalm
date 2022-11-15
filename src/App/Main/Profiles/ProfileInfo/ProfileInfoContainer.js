@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   setUserProfile,
-  typingPost,
-  addPost,
 } from '../../../../Redux/profiles-reducer';
 import { connect } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ProfileInfo from './ProfileInfo';
 
-class ProfilesContainer extends React.Component {
-  componentDidMount() {
+const ProfilesContainer = (props) => {
+  const { userId } = useParams();
+
+  useEffect(() => {
     // this.props.toggleFetching(true);
     axios
-      .get('https://social-network.samuraijs.com/api/1.0/profile/2')
+      .get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
       .then(response => {
-        this.props.setUserProfile(response.data);
+        props.setUserProfile(response.data);
         // this.props.toggleFetching(false);
       });
-  }
+  }, [userId]
+  )
 
-  render() {
-    return <ProfileInfo {...this.props} />;
-  }
+    return <ProfileInfo { ...props } />;
 }
 
 const mapStateToProps = state => {
@@ -31,8 +31,7 @@ const mapStateToProps = state => {
   };
 };
 
+
 export default connect(mapStateToProps, {
   setUserProfile,
-  typingPost,
-  addPost,
 })(ProfilesContainer);

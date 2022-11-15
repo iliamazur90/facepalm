@@ -1,2 +1,46 @@
 .ProfileInfo {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas:
+      "p d";
+    grid-gap: 2px;
+    height: 185px;
+    background-color:rgba(68, 29, 80, 0.601);
+    border-radius: 8px;
+}
+
+.photo {
+    padding: 14px 0 0 14px;
+}
+
+.photo img {
+    width: 170px;
+    height: 170px;
+    border-radius: 8px;
+}
+
+.details {
+    display:flex;
+    flex-direction:column;
+    align-self: end;
+    padding: 0 0 8px 0;
+}
+
+.fullName {
+    padding: 4px 0 4px 0;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.aboutMe {
+    flex: 1 1 0;
+    padding: 4px 0 4px 0;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.posts {
+    padding: 24px 0 0 14px;
+    font-weight: 600;
+    font-size: 20px;
 }

@@ -1,6 +1,6 @@
 import s from "./Friend.module.css";
 import Avatar from "./../../../../img/fp_avatar.jpg";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Friend = props => {
   return (

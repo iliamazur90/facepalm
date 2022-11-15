@@ -12,7 +12,7 @@ function Main(props) {
     <div className={s.Main}>
       <Routes>
         <Route path="/" element={<MyPostsContainer />} />
-        <Route path="/profile/*" element={<ProfileInfoContainer />} />
+        <Route path="/profile/:userId" element={<ProfileInfoContainer />} />
         <Route path="/friends" element={<FriendsContainer />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/settings" element={<Settings />} />
