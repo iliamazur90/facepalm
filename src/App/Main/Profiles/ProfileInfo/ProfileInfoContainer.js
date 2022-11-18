@@ -12,6 +12,10 @@ const ProfilesContainer = (props) => {
 
   useEffect(() => {
     // this.props.toggleFetching(true);
+
+    if(!userId) {
+      userId = 2;
+    }
     axios
       .get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
       .then(response => {
