@@ -1,0 +1,42 @@
+.Header {
+    display: flex;
+    grid-area: h;
+    margin: 0 4px 0 4px;
+    padding: 8px;
+    background-color: rgb(2, 79, 166);
+    border-radius: 0 0 12px 12px;
+}
+.HeaderTitle {
+    display: flex;
+}
+
+.HeaderImg {
+
+}
+
+.HeaderImg img {
+    width: 60px;
+    border-radius: 10%;
+}
+
+.HeaderText {
+    align-self: flex-end;
+    margin: 4px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10px 0 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.login a{
+    font-size: 20px;
+    font-weight: 700;
+}

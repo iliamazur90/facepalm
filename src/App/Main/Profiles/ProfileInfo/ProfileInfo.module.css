@@ -10,14 +10,13 @@
 .profileInfoContainer{
     grid-area: profile-details;
     display:flex;
-    height: 182px;
+    height: 190px;
     background-color:rgba(68, 29, 80, 0.601);
     border-radius: 8px;
 }
 
-
 .avatar {
-    margin: 12px;
+    margin: 10px;
 }
 
 .avatar img {

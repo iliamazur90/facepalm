@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './Header/Header';
+import HeaderContainer from './Header/HeaderContainer';
 import Navbar from './Navbar/Navbar';
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
@@ -7,7 +7,7 @@ import Footer from './Footer/Footer';
 function App(props) {
   return (
     <div className="App">
-      <Header />
+      <HeaderContainer />
       <Navbar />
       <Main store={props.store} />
       <Footer />

@@ -1,6 +1,7 @@
 const UPDATE_POST_TEXT = "UPDATE-POST-TEXT";
 const ADD_POST = "ADD-POST";
 const SET_USER_PROFILE = "SET-USER-PROFILE";
+const TOGGLE_FETCHING = "TOGGLE-FETCHING";
 
 let initialState = {
   posts: [
@@ -74,6 +75,11 @@ const profilesReducer = (state = initialState, action) => {
           ...state,
           profile: action.profile,
         }
+        case TOGGLE_FETCHING: 
+        return {
+          ...state,
+          isFetching: action.isFetching,
+        }
     default:
       return state;
   }
@@ -85,5 +91,6 @@ export const typingPost = currentText => ({
 });
 export const addPost = () => ({ type: ADD_POST });
 export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile})
+export const toggleFetching = (isFetching) => ({ type: TOGGLE_FETCHING, isFetching});
 
 export default profilesReducer;

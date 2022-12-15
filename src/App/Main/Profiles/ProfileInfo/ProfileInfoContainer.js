@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import {
   setUserProfile,
+  toggleFetching,
 } from '../../../../Redux/profiles-reducer';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -11,7 +12,7 @@ const ProfilesContainer = (props) => {
   const { userId } = useParams();
 
   useEffect(() => {
-    // this.props.toggleFetching(true);
+    props.toggleFetching(true);
 
     if(!userId) {
       userId = 2;
@@ -20,9 +21,9 @@ const ProfilesContainer = (props) => {
       .get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
       .then(response => {
         props.setUserProfile(response.data);
-        // this.props.toggleFetching(false);
+        props.toggleFetching(false);
       });
-  }, [userId]
+  }, []
   )
 
     return <ProfileInfo { ...props } />;
@@ -37,5 +38,5 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps, {
-  setUserProfile,
+  setUserProfile, toggleFetching,
 })(ProfilesContainer);

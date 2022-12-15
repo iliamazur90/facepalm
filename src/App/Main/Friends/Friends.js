@@ -1,6 +1,6 @@
-import s from "./Friends.module.css";
-import Preloader from "../../common/Preloader/Preloader";
-import Friend from "./Friend/Friend";
+import s from './Friends.module.css';
+import Preloader from '../../common/Preloader/Preloader';
+import Friend from './Friend/Friend';
 
 const Friends = props => {
   const pagesCount = Math.ceil(props.totalUsers / props.pageSize);
@@ -14,20 +14,17 @@ const Friends = props => {
       <h2>Friends</h2>
       <div className={s.pages}>
         {pages.map(p => {
-          {
-            if (p <= 25) {
-              return (
-                <span
-                  onClick={() => {
-                    props.onPageChange(p);
-                  }}
-                  key={p}
-                  className={p === props.currentPage ? s.currentPage : s.page}>
-                  {p}
-                </span>
-              );
-            }
-          }
+          return (
+            <span
+              onClick={() => {
+                props.onPageChange(p);
+              }}
+              key={p}
+              className={p === props.currentPage ? s.currentPage : s.page}
+            >
+              {p}
+            </span>
+          );
         })}
       </div>
       {props.isFetching ? <Preloader /> : null}
@@ -35,6 +32,9 @@ const Friends = props => {
         users={props.users}
         unfollow={props.unfollow}
         follow={props.follow}
+        isFetching={props.isFetching}
+        followingInProgress={props.followingInProgress}
+        toggleFollowingProgress={props.toggleFollowingProgress}
       />
     </div>
   );

@@ -1,12 +1,24 @@
 .Friend {
     display: grid;
-    grid-template-columns: 43px 1fr 80px;
+    grid-template-columns: 80px 43px 1fr;
     grid-template-areas:
-      "a u s";
+      "status ava user";
     grid-gap: 2px;
     margin: 8px;
     background-color:rgba(68, 29, 80, 0.601);
     border-radius: 8px;
+}
+
+.statusButton {
+    display: flex;
+    align-self: center;
+    justify-content:flex-end;
+    margin: 0 10px 0 0;
+}
+
+.statusButton button {
+    background-color: rgb(2, 79, 166);
+    color: aliceblue;
 }
 
 .friendAvatar img {
@@ -20,16 +32,4 @@
     align-self: center;
     font-size: 18px;
     font-weight: 600;
-}
-
-.statusButton {
-    display: flex;
-    align-self: center;
-    justify-content:flex-end;
-    margin: 0 10px 0 0;
-}
-
-.statusButton button {
-    background-color: rgb(2, 79, 166);
-    color: aliceblue;
 }
